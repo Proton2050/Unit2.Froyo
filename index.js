@@ -5,13 +5,13 @@ let flavors = prompt("What flavors of frozen yogurt would you like?", "vanilla,v
 // split flavors by commas into an flavors array
 let falvorArray = flavors.split(',');
 // create an object to store the flavors and quantity of each
-const froyoFlavors = {};
+const froyoOrder = {};
 for (const flavor of falvorArray) {
-    froyoFlavors[flavor] ? froyoFlavors[flavor]++ : froyoFlavors[flavor] = 1;
+    froyoOrder[flavor] ? froyoOrder[flavor]++ : froyoOrder[flavor] = 1;
 };
 // Iterate through each key in flavor object and log to the console the flavors and quantities
 console.log(`Alright! we've got: `)
-for (const flavor in froyoFlavors) {
-    console.log(`${froyoFlavors[flavor]} ${flavor} froyo!`)
+for (const flavor in froyoOrder) {
+    console.log(`${froyoOrder[flavor]} ${flavor} froyo!`)
 };
 console.log(`Enjoy!😄`)
